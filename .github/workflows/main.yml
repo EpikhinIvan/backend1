@@ -35,8 +35,8 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 22
         script: |
+          source /venv/bin/activate        
           cd /root/backbot/
-          source root/venv/bin/activate
           git pull origin master
           python manage.py migrate
           python manage.py collectstatic --noinput
