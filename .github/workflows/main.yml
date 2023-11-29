@@ -36,7 +36,7 @@ jobs:
         port: 22
         script: |
           cd /root/backbot/
-          source venv/bin/activate
+          source root/venv/bin/activate
           git pull origin master
           python manage.py migrate
           python manage.py collectstatic --noinput
